@@ -2,7 +2,7 @@ import React from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import Footer from './Components/Footer'
 import Header from './Components/Header'
-import ProductList from './contaiers/ProductList'
+import ProductList from './containers/ProductList'
 
 const App = () => {
 

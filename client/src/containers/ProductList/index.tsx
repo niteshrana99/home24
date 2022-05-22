@@ -7,7 +7,6 @@ import { useAppContext } from '../../hooks/useAppContext';
 
 const ProductList = () => {
     const { appContext, loadInitialData, loadCategoryArticles } = useAppContext();
-    console.log(appContext.state.appState);
     const { isLoading, childrenCategories, articlesData } = appContext.state.appState;
     let location = useLocation();
     useEffect(() => {
