@@ -31,6 +31,15 @@
 
 ![image](https://user-images.githubusercontent.com/24535674/169701220-cf3f1bc1-8b40-4181-8617-ea58637fd0f3.png)
 
+10. Also one small observation was that the article Name are not aligned properly in cards as you can see below Image
+
+![image](https://user-images.githubusercontent.com/24535674/169706630-e64fa05f-04b1-482a-aca0-231ce956082c.png)
+
+This has been fixed by adding flex:1 to the name element. The fix can be seen in below Image
+
+![image](https://user-images.githubusercontent.com/24535674/169706674-d92a2029-fcfb-4f06-9a9f-b538f52d4412.png)
+
+
 
 ##### Code Changes and Directory Structure
 
