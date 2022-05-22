@@ -44,5 +44,45 @@ React, Emotion.js with Syled, Apollo Client,  Jest and React testing Library for
   ![image](https://user-images.githubusercontent.com/24535674/169702000-68b25870-c7f1-4a88-bc11-a8437b6c46c9.png)
 
   #### Using react Router v6.
-  The configuration for router can be found in App.tsx. As you can see there for any routes that do not match list of routes user will be redirected to localhost:3000.   So, if in browser url, you write something like http://localhost:3000/abc.xyz - you will be redirected to ]http://localhost:3000
+  The configuration for router can be found in App.tsx. As you can see there for any routes that do not match list of routes user will be redirected to localhost:3000.   So, if in browser url, you write something like http://localhost:3000/abc.xyz - you will be redirected to ]http://localhost:3000. With the help of react router we     can easily identify the parts that will change on routing hence making development scalable easily.
+  
+  #### Application state.
+  I am using React's Context for setting and getting the application state. As you can see in Context.tsx I am exporting the Context provider. This context provider is   using useReducer for managing the reducers and state. To make this App context more reusable I have created a hook (useAppContext.ts) which can be used to import       functions like dispach as well to import state in a particular component. 
+  
+  #### Component Folder Structure
+  As you can see productList is added to Container now. So basically container is basically a page/route of an applicatio. Container is basically a wrapper for various   components. Our container component loads the data and passes it to the children component. As you can see in containers/index.tsx (which is our productlist.tsx),     the data is loaded by using our useAppContext hook and passed to sidebar and Article components. This way our container becomes a single source for managing state of   a particlar page rather than initalizing context state to each component.
+  
+  Also, our graphql API was not expecting any variables , so I changed the graphql query to accept variables. As, you can see in containers/index.tsx, loadArticles       function, I am passing Id to load sofa and couces. So if you click on any sidebar menu Links, you can see that different articles for sofas and couches is loaded for   you. Since I was not able to find Id's of other links, this I did just to show how we can pass variables to our graphql query.
+  
+  Other Components: All these files are inside components directory
+  1. ArticleCard - This component basically represents each card containing and Image we see in our UI. The Image is lazy loaded on scroll. This component is also       responsible for Adding/Removing Items to Cart and Adding/Removig from wishlist.
+  2. Articles - This component is basically a wrapper for ArticleCards. This component is responsible for rendering all the article cards.
+  3. Button - This is the component used for laoding diffrent buttons that we have in our app. Example Add to card, cart and wishlist buttons (on top header).
+  4. Fallback - This is the Error fallback component used by error boundary.
+  5. Footer - Footer Component.
+  6. Header Component - It contains Input and cart and wishlist buttons.
+  7. Input Component - This component is used for rendering HTML input element.
+  8. LazyImage - This component is used for lazily loading images and uses Intersection observer API.
+  9. Sidebar - The sidebar component.
+  10. Spinner - To show the loading state of a component.
 
+  Reducers:
+  Products.reducer.ts -> For storing the products Info
+  User.reducer.ts -> For storing the user info like widhlist and cart.
+  
+  I am combining reducers in combinereducer function used in context.tsx.
+  
+  Action.constants.ts -> For handling the action types and interface and Storing action consants.
+  
+  context.utils.ts -> A function for combinig the reducers. We can store other functions there as well.
+  
+  hooks/useAppContext.ts -> This hook is basically used for storing context, handling async dispatch functions. It returns the functions and the appcontext state and     dispatch function.
+  
+  Queries/getArticleQuery.ts -> For storing queries. As you can see I have added code to include variables in queries.
+  
+  Shared/theme.ts -> Used for storing Emotion theme.
+  
+  utils/utils.const.ts -> For storing constants. It stores the constant variable for fetching initial data.
+  
+#### Test cases
+ I have written testcases for sidebar.tsx and users.reducer.tsx
