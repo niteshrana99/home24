@@ -6,7 +6,7 @@ React, Emotion.js with Syled, Apollo Client,  Jest and React testing Library for
 #### UI Changes:
 ![image](https://user-images.githubusercontent.com/24535674/169700545-63fb41d4-662a-4018-aef0-8a032f82b2d0.png)
 
-1. I am using Intersection observer API so that we can lazy load the images on scroll. As you can see in below snapshot the Images are being rendered on the UI as users scroll.
+1. I am using Intersection observer API so that we can **lazy load** the images on scroll. As you can see in below snapshot the Images are being rendered on the UI as users scroll.
 ![image](https://user-images.githubusercontent.com/24535674/169700951-530131f4-3179-4154-ae01-5ba3dfa3a04d.png)
  
 2. Added Button Icons for Add to Cart and Wishlist in header.
