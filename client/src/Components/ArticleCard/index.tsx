@@ -6,7 +6,7 @@ import { Article } from '../../types'
 import { formatter } from '../../utils/utils'
 import { Button } from '../Button'
 import LazyImage from '../LazyImage'
-import { ArticleCardWrapper, IconButtonStyled } from './style'
+import { ArticleCardWrapper, ArticleName, IconButtonStyled } from './style'
 
 const ArticleCard = ({ article }: { article: Article }) => {
 
@@ -47,7 +47,7 @@ const ArticleCard = ({ article }: { article: Article }) => {
         {isWishListed ? <HeartFill width={20} height={20} color={'red'} /> : <Heart width={20} height={20} />}
       </IconButtonStyled>
       <LazyImage src={article.images[0].path} alt="productImage" />
-      <div>{article.name}</div>
+      <ArticleName>{article.name}</ArticleName>
       <div>{formatter.format(article.prices.regular.value / 100)}</div>
       <Button onClick={onAddToCartClick}>{isAddedToCart ? 'Remove from Cart' : 'Add to Cart'}</Button>
     </ArticleCardWrapper>

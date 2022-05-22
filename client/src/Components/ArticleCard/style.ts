@@ -16,3 +16,7 @@ export const IconButtonStyled = styled(IconButton)`
     right:4%;
     top:2%;
 `
+
+export const ArticleName = styled('div')`
+    flex:1;
+`;
