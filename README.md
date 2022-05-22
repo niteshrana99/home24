@@ -1,8 +1,5 @@
 # home24
 
-Technologies used:
-React, Emotion.js with Syled, Apollo Client,  Jest and React testing Library for writing test cases.
-
 #### UI Changes:
 
 ![image](https://user-images.githubusercontent.com/24535674/169700545-63fb41d4-662a-4018-aef0-8a032f82b2d0.png)
