@@ -16,8 +16,8 @@
 6. Added theming for project in emotion.d.ts.
 
 7. Added Spinner while the data is being loaded.                                                                                                                  !
+![image](https://user-images.githubusercontent.com/24535674/169704617-342f6e07-5f1b-4240-98cc-b40973418286.png)
 
-[image](https://user-images.githubusercontent.com/24535674/169700623-90040480-d4f3-434c-9521-6df778877ff3.png)
 
 7. Added active class for list to show which category is slected. 
 
