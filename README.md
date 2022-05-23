@@ -2,8 +2,8 @@
 
 Setup -> 
 In both client and server folder:
-npm install
-npm start
+1. npm install
+2. npm start
 
 #### UI Changes:
 
