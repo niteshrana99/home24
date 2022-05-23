@@ -1,5 +1,10 @@
 # home24
 
+Setup -> 
+In both client and server folder:
+npm install
+npm start
+
 #### UI Changes:
 
 ![image](https://user-images.githubusercontent.com/24535674/169700545-63fb41d4-662a-4018-aef0-8a032f82b2d0.png)
